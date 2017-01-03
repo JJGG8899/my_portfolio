@@ -1,0 +1,20 @@
+<% layout('layout') -%>
+
+<div class="manage-work-wrapper">
+  <table class="table">
+    <tr>
+      <td> Title </td>
+      <td> Category </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <% for(var i = 0; i < works.length; i++) { %>
+      <tr>
+        <td> <%= works[i].title %> </td>
+        <td> <%= works[i].category %> </td>
+        <td> <a href="/work/edit/<%= works[i]._id %>" class="btn btn-primary"> Edit </a></td>
+        <td> <a data-id="<%= works[i]._id%>" class="btn btn-danger delete-work"> Delete </a></td>
+      </tr>
+    <% } %>
+  </table>
+</div>

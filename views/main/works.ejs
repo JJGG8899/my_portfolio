@@ -1,0 +1,41 @@
+<% layout('layout') -%>
+
+<section class="work-wrapper">
+  <section class="work-title">
+    <h3> WORK </h3>
+    <h6> A showcase of development, PM, UX design, and experiments</h6>
+  </section>
+  <section class="work-categories">
+    <ul>
+      <li class="active"> <a href="/works"> All </a></li>
+      <li> <a href="/works/Development"> Web development</a></li>
+      <li> <a href="/works/ProductManagement"> Product manager </a></li>
+      <li> <a href="/works/UXDesign"> UX Design </a></li>
+      <li> <a href="/works/Experiments"> Experiments </a></li>
+    </ul>
+  </section>
+  <section class="work-showcase">
+    <div class="row work-showcase-content">
+      <% for(var i=0; i < works.length; i++){ %>
+      <div class="col-md-4 col-xs-12">
+				<div class="thumbnail">
+					<div class="thumbnail-image">
+						<a href="/work/<%= works[i]._id %>">
+							<img src="<%= works[i].demoPic %>">
+						</a>
+					</div>
+					<div class="caption pull-right">
+		        <p> <span><i class="fa fa-user" aria-hidden="true"></i></span> <%= works[i].category %> </p>
+		      </div>
+		    </div>
+				<div class="recent-work-showcase-client">
+					<div class="client-image client-item">
+						<img src="<%= works[i].clientPic %>" alt="<%= works[i].clientPic %>" />
+					</div>
+					<p class="client-item"> <%= works[i].client %> </p>
+				</div>
+			</div>
+      <% } %>
+    </div>
+  </section>
+</section>

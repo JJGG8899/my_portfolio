@@ -1,0 +1,63 @@
+<% layout('layout') -%>
+
+<div class="edit-work-wrapper col-md-6 col-md-offset-3">
+  <% if(message.length > 0) {%>
+    <div class="alert alert-success alert-dismissalbe">
+      <button type="button" class='close' data-dismiss='alert'
+        aria-label="Close">
+        <span aria-hidden="true"> &times; </span>
+      </button>
+      <%= message %>
+    </div>
+  <% } %>
+
+  <form class="edit-work-form" method="post">
+    <div class="form-group">
+      <label>Client:</label>
+      <input type="text" name="client"
+             class="form-control" value="<%= work.client %>">
+    </div>
+    <div class="form-group">
+      <label>ClientPic: </label>
+      <input type="text" name="clientPic" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>ClientLink: </label>
+      <input type="text" name="clientLink" class="form-control">
+    </div>
+    <div class="form-group">
+      <label> Category:</label>
+      <select class="form-control" name="category">
+        <option value='Development' <%= work.category == "Development" ? "selected" : "" %> > Development </option>
+        <option value='ProductManagement' <%= work.category == "ProductManagement" ? "selected" : "" %> > Product Management </option>
+        <option value='UXDesign' <%= work.category == "UXDesign" ? "selected" : "" %> >UX Design </option>
+        <option value='Experiments' <%= work.category == "Experiments" ? "selected" : "" %> > Experiments </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Title: </label>
+      <input type="text" name="title" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>My Role: </label>
+      <input type="text" name="role"
+             class="form-control" value="<%= work.role %>">
+    </div>
+    <div class="form-group">
+      <label>Technologies: </label>
+      <input type="text" name="technologies"
+             class="form-control" value="<%= work.technologies %>">
+    </div>
+    <div class="form-group">
+      <label> Short Description: </label>
+      <textarea name="shortDesc" rows="5" class="form-control"><%= work.shortDesc %>
+      </textarea>
+    </div>
+    <div class="form-group">
+      <label>Demo Picture </label>
+      <input type="text" name="demoPic"
+             class="form-control" value="<%= work.demoPic %>">
+    </div>
+    <button type="submit" class="btn btn-success"> Submit </button>
+  </form>
+</div>

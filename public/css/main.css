@@ -1,0 +1,536 @@
+* {
+    box-sizing: border-box
+}
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table
+}
+.clearfix:after {
+    clear: both
+}
+main-wrapper .wrapper {
+    width: 1440px;
+    max-width: 90%;
+    margin: 0 auto
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300
+}
+.menu-icon {
+    display: none;
+    z-index: 999
+}
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh
+}
+.side-nav .side-nav-wrapper {
+    width: 100%;
+    height: 100%;
+    border-right: solid #eee 1px;
+    position: relative;
+    display: block
+}
+.side-nav .side-nav-wrapper .side-nav-content {
+    padding: 5px;
+    width: 100%;
+    height: 405px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -200px
+}
+.side-nav .side-nav-wrapper .side-nav-content li {
+    list-style: none;
+    width: 100%;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer
+}
+.side-nav .side-nav-wrapper .side-nav-content li a {
+    text-decoration: none;
+    color: black
+}
+.side-nav .side-nav-wrapper .side-nav-content li a:hover {
+    transition: all 0.5s ease;
+    color: #c33
+}
+.side-nav .side-nav-wrapper .side-nav-content li a h3 {
+    width: 180px;
+    font-weight: 600;
+    line-height: 1.5rem;
+    font-size: 2.2rem;
+    letter-spacing: -0.05rem;
+    padding-bottom: 10px;
+    border-bottom: 1px #eee solid
+}
+.side-nav .side-nav-wrapper .side-nav-content li a h3 .fa {
+    margin-right: 7px
+}
+.side-nav .side-nav-wrapper .side-nav-content li a h6 {
+    margin-top: 12px;
+    font-weight: 300;
+    letter-spacing: .2rem
+}
+.side-nav .side-nav-wrapper .side-nav-footer {
+    position: absolute;
+    bottom: 0px;
+    color: #999;
+    width: 200px;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 20px
+}
+.main-wrapper {
+    background-color: white;
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    margin-top: -20px;
+    display: block
+}
+.main-wrapper .banner {
+    background: url(../images/home_bg_1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85vh;
+    width: 100%;
+    position: relative
+}
+.main-wrapper .banner .banner-content {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    margin-left: -40%;
+    width: 80%;
+    text-align: center
+}
+.main-wrapper .banner .banner-content h3 {
+    font-weight: 600;
+    line-height: 7rem;
+    font-size: 6rem;
+    letter-spacing: -0.05rem;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    color: white
+}
+.main-wrapper .banner .banner-content h3 span {
+    color: #c33;
+    font-weight: 300;
+    font-size: 6rem;
+    line-height: 7rem;
+    margin-left: 20px
+}
+.main-wrapper .banner .banner-content h6 {
+    margin-top: 45px;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase
+}
+.main-wrapper .banner .banner-content h6 span {
+    margin: 0 10px;
+    color: #c33
+}
+.main-wrapper .recent-work {
+    width: 100%;
+    padding: 4rem
+}
+.main-wrapper .recent-work .recent-work-title {
+    width: 100%;
+    text-align: center
+}
+.main-wrapper .recent-work .recent-work-title h3 {
+    font-weight: 600;
+    line-height: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: -0.05rem
+}
+.main-wrapper .recent-work .recent-work-title h6 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    text-transform: uppercase
+}
+.main-wrapper .recent-work .thumbnail {
+    -webkit-box-shadow: 1px 0px 1px 1px #bdbdbf;
+    -moz-box-shadow: 1px 0px 1px 1px #bdbdbf;
+    box-shadow: 1px 0px 1px 1px #bdbdbf;
+    border: 0;
+    padding: 10px;
+    height: 300px;
+    overflow: hidden
+}
+.main-wrapper .recent-work .thumbnail .thumbnail-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden
+}
+.main-wrapper .recent-work .thumbnail .thumbnail-image img {
+    width: 100%;
+    height: 100%
+}
+.main-wrapper .recent-work .thumbnail .caption {
+    color: #bbb;
+    margin-top: 10px;
+    padding-right: 10px
+}
+.main-wrapper .recent-work .thumbnail .caption p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 0.5rem
+}
+.main-wrapper .recent-work .thumbnail .caption p span {
+    line-height: 1rem;
+    font-size: 1.5rem;
+    margin-right: 5px
+}
+.main-wrapper .recent-work .recent-work-showcase-client {
+    padding-left: 10px
+}
+.main-wrapper .recent-work .recent-work-showcase-client .client-item {
+    display: inline-block
+}
+.main-wrapper .recent-work .recent-work-showcase-client .client-image {
+    width: 30px;
+    height: 30px
+}
+.main-wrapper .recent-work .recent-work-showcase-client .client-image img {
+    width: 100%;
+    height: 100%
+}
+.main-wrapper .recent-work .recent-work-showcase-client p {
+    font-weight: 100;
+    font-size: 1.2rem;
+    letter-spacing: .2rem
+}
+.main-wrapper .recent-work .recent-work-showcase-client p span {
+    line-height: 1rem;
+    font-size: 1.5rem;
+    margin-right: 5px
+}
+.contact-banner {
+    width: 100%;
+    height: 400px;
+    padding: 4rem
+}
+.contact-banner h3 {
+    margin-top: 6rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: -0.05rem;
+    text-transform: uppercase
+}
+.contact-banner h6 {
+    margin-top: 2rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    text-transform: uppercase
+}
+.contact-banner ul {
+    padding-left: 0;
+    list-style: none
+}
+.contact-banner ul li {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    margin-right: 2.5rem
+}
+.contact-banner ul li:last-child {
+    margin-left: -2rem;
+    margin-right: 0
+}
+.contact-banner ul li img {
+    height: 100%
+}
+.contact-form {
+    width: 100%;
+    background-image: url(https://c2.staticflickr.com/6/5538/13940519593_3c5a870b56_b.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    text-align: center
+}
+.contact-form h3 {
+    margin-top: 6rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: -0.05rem;
+    text-transform: uppercase
+}
+.contact-form h6 {
+    margin-top: 2rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    text-transform: uppercase
+}
+.contact-form .contact-form-content {
+    padding: 3rem 20rem
+}
+.contact-form .contact-form-content .control-label {
+    text-align: center;
+    color: #c33;
+    font-size: 2rem
+}
+.contact-form .contact-form-content .form-control {
+    height: 4.5rem
+}
+.contact-form .contact-form-content #form-message {
+    height: 10rem
+}
+.contact-form .contact-form-content button {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    background-color: black;
+    padding: 1.5rem 2.5rem
+}
+.contact-form .contact-form-content button:hover {
+    background-color: #c33;
+    transition: all .5s ease
+}
+.work-wrapper {
+    padding: 2rem
+}
+.work-wrapper .work-title {
+    margin: 4rem auto;
+    text-align: center
+}
+.work-wrapper .work-title h3 {
+    margin-top: 6rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: -0.05rem;
+    text-transform: uppercase
+}
+.work-wrapper .work-title h6 {
+    width: 26rem;
+    margin: 2rem auto;
+    font-weight: 300;
+    line-height: 2rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase
+}
+.work-wrapper .work-categories ul {
+    width: 100%;
+    list-style: none;
+    font-weight: 300;
+    color: #999;
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase
+}
+.work-wrapper .work-categories ul li {
+    float: left;
+    margin-left: 3rem
+}
+.work-wrapper .work-categories ul li:first-child {
+    margin-left: 0
+}
+.work-wrapper .work-categories ul li a{
+  text-decoration: none;
+  color:black;
+}
+.work-wrapper .work-categories ul li.active {
+    color: #c33;
+    padding-bottom: 5px;
+    border-bottom: solid #c33 3px
+}
+.work-wrapper .work-categories ul li.active a{
+    color: #c33;
+    padding-bottom: 5px;
+    border-bottom: solid #c33 3px
+}
+
+.work-wrapper .work-showcase {
+    width: 100%;
+    padding: 4rem
+}
+.work-wrapper .work-showcase .recent-work-title {
+    width: 100%;
+    text-align: center
+}
+.work-wrapper .work-showcase .recent-work-title h3 {
+    font-weight: 600;
+    line-height: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: -0.05rem
+}
+.work-wrapper .work-showcase .recent-work-title h6 {
+    margin-top: 12px;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    text-transform: uppercase
+}
+.work-wrapper .work-showcase .thumbnail {
+    -webkit-box-shadow: 1px 0px 1px 1px #bdbdbf;
+    -moz-box-shadow: 1px 0px 1px 1px #bdbdbf;
+    box-shadow: 1px 0px 1px 1px #bdbdbf;
+    border: 0;
+    padding: 10px;
+    margin: 40px 0 10px 0;
+    height: 300px;
+    overflow: hidden
+}
+.work-wrapper .work-showcase .thumbnail .thumbnail-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden
+}
+.work-wrapper .work-showcase .thumbnail .thumbnail-image a {
+    cursor: pointer
+}
+.work-wrapper .work-showcase .thumbnail .thumbnail-image a img {
+    width: 100%;
+    height: 100%
+}
+.work-wrapper .work-showcase .thumbnail .caption {
+    color: #bbb;
+    margin-top: 10px;
+    padding-right: 10px
+}
+.work-wrapper .work-showcase .thumbnail .caption p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 0.5rem
+}
+.work-wrapper .work-showcase .thumbnail .caption p span {
+    line-height: 1rem;
+    font-size: 1.5rem;
+    margin-right: 5px
+}
+.work-wrapper .work-showcase .recent-work-showcase-client {
+    padding-left: 10px
+}
+.work-wrapper .work-showcase .recent-work-showcase-client .client-item {
+    display: inline-block
+}
+.work-wrapper .work-showcase .recent-work-showcase-client .client-image {
+    width: 30px;
+    height: 30px
+}
+.work-wrapper .work-showcase .recent-work-showcase-client .client-image img {
+    width: 100%;
+    height: 100%
+}
+.work-wrapper .work-showcase .recent-work-showcase-client p {
+    font-weight: 100;
+    font-size: 1.2rem;
+    letter-spacing: .2rem
+}
+.work-wrapper .work-showcase .recent-work-showcase-client p span {
+    line-height: 1rem;
+    font-size: 1.5rem;
+    margin-right: 5px
+}
+.single-work-overview {
+    background-color: #f4f4f4;
+    padding: 50px 100px;
+    height: 100vh
+}
+.single-work-overview .single-work-intro {
+    margin-bottom: 20px;
+    color: #444
+}
+.single-work-overview .single-work-overview-demo {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px
+}
+.single-work-overview .single-work-overview-demo img {
+    width: 100%;
+    height: 100%
+}
+.single-work-overview .single-work-overview-content {
+    color: #ababab;
+    padding: 15px
+}
+.single-work-overview .single-work-overview-content .single-work-item {
+    width: 100%;
+    border-bottom: solid #ababab .1px;
+    line-height: 5rem;
+    font-size: 1.3rem
+}
+.single-work-overview .single-work-overview-content .single-work-item a {
+    text-decoration: none;
+    color: #ababab
+}
+.single-work-overview .single-work-desc .single-work-item {
+    margin-top: 40px;
+    color: #555;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: left
+}
+@media only screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        position: fixed;
+        font-size: 4rem;
+        color: black;
+        top: 20px;
+        left: 40px;
+        cursor: pointer;
+        position: 99
+    }
+    .menu-icon:hover {
+        color: #c33
+    }
+    .menu-icon:active {
+        color: #c33
+    }
+    .side-nav {
+        z-index: -99
+    }
+    .side-nav.active {
+        z-index: 99;
+        background-color: white
+    }
+    .main-wrapper {
+        width: 100%;
+        margin: -20px auto 0 auto
+    }
+    .contact-form .contact-form-content {
+        padding: 3rem 3rem
+    }
+    .work-wrapper .work-categories {
+        font-size: 1.2rem
+    }
+    .work-wrapper .work-categories ul {
+        padding: 0 1rem
+    }
+    .work-wrapper .work-categories ul .li {
+        margin-left: 1.2rem
+    }
+}

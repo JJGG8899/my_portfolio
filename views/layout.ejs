@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movies &amp; Stuff | Mackenzie Child</title>
+	<!-- viewport is import for mobile device to have media css feature -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- this is to make sure all css work for all browsers -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<a href="#" class="menu-icon"><i class="fa fa-bars"></i></a>
+	<section class="side-nav">
+		<div class="side-nav-wrapper">
+			<% if(user){ %>
+				<a href="/add-work" class="btn btn-default">New Work</a>
+				<a href="/manage-works" class="btn btn-success">Manage Work</a>
+				<a href="/logout" class="btn btn-primary"> Logout </a>
+			<% } %>
+			<ul class="side-nav-content">
+				<li>
+					<a href='/'>
+						<h3> <i class="fa fa-cogs" aria-hidden="true"></i> About </h3>
+						<h6> Who i am </h6>
+					</a>
+				</li>
+				<li>
+					<a href='/works'>
+						<h3> <i class="fa fa-desktop" aria-hidden="true"></i> Work </h3>
+						<h6> View case studies </h6>
+					</a>
+				</li>
+				<li>
+					<a href="/contact">
+						<h3> <i class="fa fa-phone" aria-hidden="true"></i> Contact </h3>
+						<h6> let's get in touch </h6>
+					</div>
+				</a>
+			</ul>
+			<div class="side-nav-footer">
+				@2016 Jason Gao
+			</div>
+		</div>
+	</section>
+  <section class="main-wrapper">
+    <%- body -%>
+  </section>
+</body>
+</html>
